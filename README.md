@@ -1,1 +1,2 @@
-# sp24-cse110-lab3
+# Lab 2 - Starter
+Github Page: https://evawlve.github.io/Lab2_Starter/
