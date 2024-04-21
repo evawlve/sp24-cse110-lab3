@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS variables */
+:root {
+    --main-bg-color: #f0f8ff; /* Primary background color variable */
+    --nav-bg-color: #ff6347; /* Navigation background color variable */
+    --text-color: #333333; /* Primary text color */
+    --highlight-color: #ff4500; /* Color for highlighting important text */
+    --footer-gradient-start: #7b4397; /* Start color for footer gradient */
+    --footer-gradient-end: #dc2430; /* End color for footer gradient */
+}
+
+
+/* Main Body Styles */
+
+* {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    padding: 2%; /* Standard padding */
+    font-size: 20px; /* Larger font size for readability on desktop */
+    font-family: 'Roboto', Arial, sans-serif; /* Roboto with fallback to Arial */
+    background-color: var(--main-bg-color, #ffffff); /* Use variable with fallback */
+    color: var(--text-color); /* Use variable for text color */
+}
+nav {
+    position: relative;
+    top: 10px; /* Move down 10px from its normal position */
+    left: 20px; /* Move right 20px from its normal position */
+}
+
+/* Navigation styles */
+nav ul {
+    background-color: var(--nav-bg-color); /* Using a variable for background */
+    padding: 1vw; /* Padding relative to width of viewport */
+    list-style-type: none;
+    margin: 10px 20px 15px 20px; /* top, right, bottom, left */
+    display: flex; /* Layout nav items in a row */
+    justify-content: space-between; /* Even spacing between navigation items */
+}
+
+nav li {
+    display: inline; /* Inline display for nav items */
+    margin-right: 10px; /* Absolute unit */ 
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+nav a {
+    color: white; /* White text in the navigation */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Adding new styles - just update existing blocks */
+nav a {
+    display: inline-block; /* Adds inline-block, previous properties remain effective */
+    padding: 5px 10px; /* Adds padding */
+    background-color: #eee; /* Adds background color */
+}
+
+nav li {
+    padding: 5px; /* Adds padding to each list item */
+}
+
+/* Using RGB and HSL */
+h1, h2 {
+    text-align: center; /* Center-aligning headers for visual focus */
+    color: rgb(0, 51, 102); /* A darker blue using RGB */
+}
+
+/* Paragraph text styling */
+p {
+    text-align: justify; /* Justifying text to align both left and right edges */
+    color: rgb(50, 50, 50); /* A slightly lighter shade of black for readability */
+}
+
+/* Emphasizing text with decoration */
+em {
+    text-decoration: underline; /* Underline to emphasize text */
+    color: #ff4500; /* Bright color for emphasis */
+}
+
+/* Comments to explain the section usage */
+/* Feedback Form Styling */
+form {
+    background-color: hsla(210, 50%, 70%, 0.5); /* Light blue with transparency */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+}
+
+input[type="text"], textarea {
+    width: 3in; /* Absolute unit for width */
+}
+
+/* Media query for tablets (less than 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 18px; /* Slightly smaller font size for tablets */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns grid for tablets */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Stack flex items vertically on smaller devices */
+    }
+}
+
+/* Media query for mobile devices (less than 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 5vw; /* More padding for smaller screens */
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    nav ul {
+        padding: 3vw; /* Increase padding in the navigation bar for mobile */
+        flex-direction: column; /* Stack nav items vertically on mobile */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column grid for mobile */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Ensure flex items are stacked vertically */
+    }
+}
+
+/* Highlighting important information */
+strong, b {
+    color: var(--highlight-color); /* Use variable for highlight color */
+}
+
+/* Footer styling with gradient */
+footer {
+    position: fixed; /* Fix footer to the bottom of the viewport */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background: linear-gradient(to right, var(--footer-gradient-start), var(--footer-gradient-end)); /* Gradient background */
+    color: white; /* Text color for readability */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Padding around the content */
+    border: 2px solid black; /* Uniform solid border around the footer */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+section {
+    padding: 20px 10px; /* top and bottom padding 20px, left and right padding 10px */
+}
+
+/* Padding longhand */
+section {
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /* Changes the cursor to a pointer to indicate this is clickable */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #45a049; /* A darker shade of green */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green to show it is being clicked */
+    transform: translateY(2px); /* Slightly shift the button down to mimic a press */
+}
+
+a {
+    color: #0077cc; /* A nice blue */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+a:hover {
+    color: #005fa3; /* A darker blue when hovered */
+}
+
+a:active {
+    color: #003d6b; /* A much darker blue to show activation */
+    position: relative;
+    top: 1px; /* Slightly move the link down to mimic being pressed */
+}
+
+/* flexbox */
+.flex-nav {
+    display: flex; /* Establishes this container as a flex container */
+    justify-content: space-around; /* Distributes space around items equally */
+    align-items: center; /* Vertically centers the items in the container */
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+}
+
+.flex-nav li {
+    margin: 0 10px; /* Adds horizontal margin for spacing between items */
+}
+
+.flex-nav a {
+    padding: 10px; /* Padding for better clickability and appearance */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Set a color that suits your design */
+    background-color: #007bff; /* Example background color for better visibility */
+    border-radius: 5px; /* Optional: rounds the corners of the links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.flex-nav a:hover {
+    background-color: #0056b3; /* Darker shade on hover for visual feedback */
+}
+
+/* grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+    grid-gap: 10px; /* Sets gap between grid items */
+    padding: 10px;
+}
+
+.grid-container img,
+.grid-container div {
+    border: 1px solid #ccc; /* Adds a light border for visual structure */
+    padding: 10px; /* Padding inside each grid item for spacing */
+}
+
+/* For the recordings, you might want to ensure that the elements take full width */
+.grid-container div {
+    width: 100%; /* Ensures audio and video elements fill the container */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Space items out on desktop */
+}
+
+#special-feature {
+    background-color: #007bff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* element selector */ 
+
+h1 {
+    color: darkblue; /* Set the color of all <h1> elements */
+    font-family: Arial, sans-serif; /* Set the font family for all <h1> elements */
+    text-align: center; /* Center-align all <h1> text */
+}
+
+/* multiple element selector */ 
+h2, p {
+    color: darkslateblue; /* Sets the text color for all three element types */
+    margin-bottom: 20px; /* Adds space below each element */
+}
+
+/* Descendant Combinator  */ 
+div span {
+    color: red; /* Makes text color red for any span within a div */
+}
+
+/* Child Combinator  */ 
+ul > li {
+    border-bottom: 1px solid #ccc; /* Adds a border to only direct li children of ul */
+}
+
+/* General Sibling Combinator  */ 
+h2 ~ p {
+    margin-top: 0; /* Removes top margin from all p elements that follow any h2 */
+}
+
+/* Adjacent Sibling Combinator  */ 
+h1 + div {
+    padding-top: 20px; /* Adds padding top only to a div that directly follows an h1 */
+}
+
+/* Combining Two Selectors  */ 
+p.highlight {
+    background-color: yellow; /* Highlights only p elements with class 'highlight' */
+}
+
+div:has(> p) {
+    border: 2px solid blue; /* Adds a blue border to divs that directly contain a <p> element */
+}
+
+nav {
+    background-color: gray;
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
