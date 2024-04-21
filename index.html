@@ -5,18 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro Timer Project - Initial Brainstorm Meeting Minutes</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      /* Internal style for  alerts */
+      .alert {
+          color: #dc143c; /* Crimson text color */
+          font-weight: bold; /* Make the text bold */
+      }
+  </style>
+  
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="#attendance">Attendance</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#discussion">Discussion Points</a></li>
-        <li><a href="#visuals">Visuals Presented</a></li>
-        <li><a href="#recordings">Meeting Recordings</a></li>
-        <li><a href="#feedback-form">Feedback Form</a></li>
+      <ul class="flex-nav">
+          <li><a href="#attendance">Attendance</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#discussion">Discussion Points</a></li>
+          <li><a href="#visuals">Visuals Presented</a></li>
+          <li><a href="#recordings">Meeting Recordings</a></li>
+          <li><a href="#feedback-form">Feedback Form</a></li>
       </ul>
-    </nav>
+  </nav>
     <div>
         <header>
           <h1>Pomodoro Timer Project - Initial Brainstorm</h1>
@@ -42,25 +52,41 @@
         <section id="discussion">
           <h2>Discussion Points</h2>
           <p>This is an example paragraph with a <a href="#">link</a>. Here's some <i>italic</i>, <em>emphasized text</em>, <b>bold text</b>, and <strong>strong importance</strong> text.<br>Finally a line break.</p>
+          <p style="color: #32cd32;">This is done using an inline style for a LimeGreen color.</p>
+          <p class="alert">This is an important alert message!</p>
         </section>
         <section id="visuals">
-          <h2>Visuals Presented</h2>
-          <img src="img.png" alt="Brainstorming Diagram">
+            <h2>Visuals Presented</h2>
+            <div class="grid-container">
+              <img src="img.png" alt="Brainstorming Diagram 1">
+              <img src="img.png" alt="Brainstorming Diagram 2">
+              <img src="img.png" alt="Brainstorming Diagram 3">
+              <img src="img.png" alt="Brainstorming Diagram 4">
+            </div>
         </section>
+
         <section id="recordings">
-          <details>
-            <summary>Meeting Recordings</summary>
-            <audio controls>
-              <source src="MeetingExample.mp3" type="audio/mpeg">
-              Your browser does not support the audio tag.
-            </audio>
-            <video controls>
-              <source src="MeetingExampleMP4.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </details>
-        </section>
+          <h2>Meeting Recordings</h2>
+          <div class="grid-container">
+              <div>
+                  <audio controls>
+                      <source src="MeetingExample.mp3" type="audio/mpeg">
+                      Your browser does not support the audio tag.
+                  </audio>
+              </div>
+              <div>
+                  <video controls>
+                      <source src="MeetingExampleMP4.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+              </div>
+          </div>
+      </section>
+      
         <section>
+          <div id="special-feature">
+            Unique Feature Description Here.
+        </div>
             <h2>Feedback Form</h2>
             <form>
               <fieldset>
